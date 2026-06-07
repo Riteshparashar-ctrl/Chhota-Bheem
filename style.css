@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: red;
+    overflow: hidden;
+}
+
+.gamecontainer {
+    background-image: url(Imagebackground.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.dino {
+    background-image: url(3D.png);
+     background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 22px;
+}
+
+.obstacle {
+    width: 150px;
+    height: 90px;
+    background-image: url(Kirmd.png);
+    background-size: cover;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 56vw;
+
+}
+
+.animateDino {
+    animation: dino 0.9s linear;
+
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+
+    }
+
+    50% {
+
+        bottom: 422px;
+    }
+
+    100% {
+        bottom: 0;
+
+
+    }
+}
+
+.obstacleAni {
+    animation: obstacleAni 3s linear infinite;
+}
+
+.gameOver {
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#scoreCont {
+    font-size: 25px;
+    position: relative;
+    left: 23px;
+    top: 23px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+    width: 112px;
+    border: radius 10px; ;
+
+
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+/* 📱 Yeh code sirf mobile screens ke liye chalega */
+@media screen and (max-width: 768px) {
+    .gamecontainer {
+        background-size: cover; 
+        background-position: center;
+    }
+
+    .dino {
+        width: 100px !important;  
+        height: 60px !important;
+        left: 15px !important;
+    }
+
+    .obstacle {
+        width: 80px !important;   
+        height: 60px !important;
+    }
+
+    .gameOver, #scoreCont {
+        font-size: 20px !important; 
+    }
+}
