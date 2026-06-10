@@ -1,11 +1,13 @@
+document.getElementById('restartBox').style.display = 'none';
 score = 0;
 cross = true;
+let gameActive = true;
+
 
 audio = new Audio('BackGround.mp3');
 audiogo = new Audio('Front.mp3');
 setTimeout(() => {
     audio.play()
-
 },1000)
 
 document.addEventListener("touchstart", function() {
@@ -56,6 +58,9 @@ setInterval(() => {
     //console.log(offsetX,offsetY)
     if (offsetX < 73 && offsetY < 52) {
         gameOver.innerHTML = "Game Over Reload to Play again";
+        document.getElementById('restartBox').style.display = 'block';
+        
+        
         obstacle.classList.remove('obstacleAni')
         audiogo.play();
         setTimeout(() => {
@@ -63,7 +68,9 @@ setInterval(() => {
             audio.pause();
 
 
-        },2000);
+        },3000);
+        document.getElementById('restartBox').style.display = 'block';
+        
     }
     else if (offsetX < 45 && cross) {
         score += 1;
@@ -79,15 +86,15 @@ setInterval(() => {
             console.log('New animation Duration',newDur)
 
         })
-
-
-
-
     }
 
 }, 10);
 
 function updateScore(score) {
     scoreCont.innerHTML = "Your Score :" + score
-
 }
+
+
+document.getElementById('restartBtn').addEventListener('click', function() {
+  location.reload();
+});

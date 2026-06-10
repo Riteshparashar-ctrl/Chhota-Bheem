@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iYadvik Game</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="gamecontainer">
         <!--<div class="gameOver"><H6>Welcome to Bheem - Created by Ritesh Parashar</H6> </div>-->
-        <div class="gameOver"><H6>Welcome to Bheem  Adventure</H6> </div>
+        <div class="gameOver">
+            <H6>Welcome to Bheem Adventure</H6>
+        </div>
         <div class="dino"></div>
         <div id="scoreCont">Your score: 0</div>
-        <div class="obstacle obstacleAni" ></div>
+        <div class="obstacle obstacleAni"></div>
+        <div id="restartBox" style="display: none;">
+            <p>Game Over!</p>
+            <button id="restartBtn">Play Again</button>
+        </div>
+
 
 
     </div>
-    
+
 </body>
+
 </html>
