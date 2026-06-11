@@ -4,6 +4,7 @@
   "description":"chhota Bheem Adventure game built with HTML,CSS, and,JS.",
   "start_url": "/Chhota-Bheem/",
   "display": "fullscreen",
+  "orientation":"landscape",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
