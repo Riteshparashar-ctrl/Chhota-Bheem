@@ -36,37 +36,28 @@ body {
     background-color: transparent;
     position: absolute;
     bottom: 0;
-    left: 56vw;
+    left: 80vw;
 
 }
-
 .animateDino {
     animation: dino 0.9s linear;
-
 }
 
 @keyframes dino {
     0% {
         bottom: 0;
-
     }
-
     50% {
-
         bottom: 422px;
     }
 
     100% {
         bottom: 0;
-
-
     }
 }
-
 .obstacleAni {
-    animation: obstacleAni 3s linear infinite;
+    animation: obstacleAni 1.2s linear infinite !important;
 }
-
 .gameOver {
     position: relative;
     top: 63px;
@@ -74,7 +65,6 @@ body {
     text-align: center;
     font-family: sans-serif;
 }
-
 #scoreCont {
     font-size: 25px;
     position: relative;
@@ -85,10 +75,7 @@ body {
     font-family: sans-serif;
     width: 112px;
     border: radius 10px; ;
-
-
 }
-
 @keyframes obstacleAni {
     0% {
         left: 100vw;
@@ -157,4 +144,85 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+}
+/* 🎯 AUTOMATIC HORIZONTAL OPEN LOGIC */
+@media screen and (orientation: portrait) {
+    html, body {
+        width: 100vh;
+        height: 100vw;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    /* 🔄 Agar user ne phone seedha pakda hai, toh game container apne aap 90 degree ghum jayega */
+    .gamecontainer {
+        width: 100vh !important;
+        height: 100vw !important;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    /* 🚫 Woh "Please rotate your phone" waala black parda hamesha ke liye block/delete */
+    div[class*="rotate"], div[id*="rotate"], .orientation-message, #rotateOverlay {
+        display: none !important;
+    }
+}
+/* ⏳ APNE CODE KE ACCORDING CONVERTED LOADER CSS */
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loaderBg {
+  position: absolute;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6); /* 🌆 Image thodi dark rahegi taaki bar saaf chamke */
+}
+
+#loaderBox {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#loaderBar {
+  width: 300px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.6); /* 🖤 Bar ka background thoda dark kra hai */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #ffcc00; /* ✨ Yellow border glow ke liye */
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+#loaderFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ffcc00, #ff6600); /* 🔥 Premium Yellow-Orange fill */
+  border-radius: 10px;
+  transition: width 0.08s linear;
+}
+
+/* 🔄 FORCE HORIZONTAL AUTO-OPEN LOGIC (TUMHARA PURANA SYSTEM SAFE) */
+@media screen and (orientation: portrait) {
+    #loader {
+        width: 100vh;
+        height: 100vw;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
 }
