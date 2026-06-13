@@ -56,7 +56,7 @@ body {
     }
 }
 .obstacleAni {
-    animation: obstacleAni 1.2s linear infinite !important;
+    animation: obstacleAni 2.0s linear infinite !important;
 }
 .gameOver {
     position: relative;

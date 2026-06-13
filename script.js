@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('restartBox').style.display = 'none';
     score = 0;
     cross = true;
-    let gameActive = true;
+    let gameActive = false;
 
 
     audio = new Audio('BackGround.mp3');
