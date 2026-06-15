@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
         offsetX = Math.abs(dx - ox);
         offsetY = Math.abs(dy - oy);
         //console.log(offsetX,offsetY)
-        if (offsetX < 70 && offsetY < 62) {
+        if (offsetX < 62 && offsetY < 48) {
             gameOver.innerHTML = "Game Over Reload to Play again";
             document.getElementById('restartBox').style.display = 'block';
 
