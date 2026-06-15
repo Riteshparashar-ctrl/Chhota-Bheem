@@ -18,19 +18,20 @@ body {
 
 .dino {
     background-image: url(3D.png);
-     background-color: transparent;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 110px;
-    height: 70px;
+    width: 140px;
+    height: 90px;
     position: absolute;
-    bottom: 0;
+    bottom: -1vh;
     left: 22px;
+    
 }
 
 .obstacle {
     width: 150px;
-    height: 90px;
+    height: 100px;
     background-image: url(Kirmd.png);
     background-size: cover;
     background-color: transparent;
@@ -56,7 +57,7 @@ body {
     }
 }
 .obstacleAni {
-    animation: obstacleAni 2.0s linear infinite !important;
+    animation: obstacleAni 1.6s linear infinite !important;
 }
 .gameOver {
     position: relative;
