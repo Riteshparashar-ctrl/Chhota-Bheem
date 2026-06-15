@@ -37,7 +37,7 @@ body {
     background-color: transparent;
     position: absolute;
     bottom: 0;
-    left: 80vw;
+    left: 100vw;
 
 }
 .animateDino {
@@ -57,7 +57,7 @@ body {
     }
 }
 .obstacleAni {
-    animation: obstacleAni 1.6s linear infinite !important;
+    animation: obstacleAni 1.5s linear infinite !important;
 }
 .gameOver {
     position: relative;
